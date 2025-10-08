@@ -34,6 +34,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 position: relative;
+padding: 20px;
 }
 
 .screen {
@@ -578,10 +579,13 @@ pointer-events: none;
 .card-wrapper {
 perspective: 1500px;
 cursor: pointer;
+width: 100%;
+max-width: 550px;
 }
 
 .birthday-card {
-width: 550px;
+width: 100%;
+max-width: 550px;
 height: 750px;
 position: relative;
 transform-style: preserve-3d;
@@ -813,11 +817,361 @@ left: 0;
 transform: rotate(45deg);
 transform-origin: 100% 100%;
 }
+
+/* Added responsive styles for mobile devices */
+@media (max-width: 768px) {
+.container {
+padding: 10px;
+}
+
+.lock-icon {
+width: 90px;
+height: 105px;
+}
+
+.lock-body {
+width: 90px;
+height: 60px;
+border-radius: 15px;
+}
+
+.lock-shackle {
+width: 52px;
+height: 52px;
+border: 15px solid #ffb3d9;
+}
+
+.lock-title {
+font-size: 32px;
+}
+
+.pin-key {
+width: 60px;
+height: 60px;
+font-size: 24px;
+}
+
+.pin-keypad {
+gap: 12px;
+}
+
+.error-message {
+font-size: 16px;
+}
+
+.gift-box {
+transform: scale(0.8);
+}
+
+.gift-box:hover {
+transform: scale(0.85) rotate(5deg);
+}
+
+.box-base {
+width: 160px;
+height: 160px;
+}
+
+.box-lid {
+width: 175px;
+height: 40px;
+top: -20px;
+left: -7.5px;
+}
+
+.ribbon-v {
+width: 30px;
+height: 160px;
+}
+
+.ribbon-h {
+width: 160px;
+height: 30px;
+}
+
+.bow {
+width: 60px;
+height: 60px;
+top: -40px;
+}
+
+.bow::before,
+.bow::after {
+width: 38px;
+height: 45px;
+}
+
+.bow::before {
+left: -34px;
+}
+
+.bow::after {
+right: -34px;
+}
+
+.bow-center {
+width: 20px;
+height: 20px;
+}
+
+.cake-container {
+transform: scale(0.7);
+}
+
+.cake-container:hover {
+transform: scale(0.75);
+}
+
+.cake-plate {
+width: 220px;
+height: 28px;
+}
+
+.cake-plate::after {
+width: 205px;
+height: 20px;
+left: 7.5px;
+}
+
+.layer-1 {
+width: 190px;
+height: 70px;
+}
+
+.layer-2 {
+width: 160px;
+height: 60px;
+}
+
+.layer-3 {
+width: 130px;
+height: 55px;
+}
+
+.candles {
+top: -60px;
+gap: 25px;
+}
+
+.candle {
+width: 12px;
+height: 55px;
+}
+
+.flame {
+width: 18px;
+height: 26px;
+top: -32px;
+}
+
+.glow {
+width: 70px;
+height: 70px;
+top: -55px;
+}
+
+.cherry {
+width: 20px;
+height: 20px;
+top: -10px;
+}
+
+.birthday-card {
+height: 600px;
+}
+
+.card-front,
+.card-inside {
+border-radius: 20px;
+border-width: 8px;
+}
+
+.card-front {
+padding: 30px 20px;
+}
+
+.card-inside {
+padding: 40px 25px;
+}
+
+.card-front h1 {
+font-size: 60px;
+margin-bottom: 15px;
+}
+
+.card-front p {
+font-size: 20px;
+}
+
+.card-inside h2 {
+font-size: 38px;
+margin-bottom: 25px;
+}
+
+.card-inside p {
+font-size: 16px;
+line-height: 1.7;
+margin-bottom: 10px;
+}
+
+.signature-section {
+margin-top: 30px;
+padding-top: 20px;
+}
+
+.signature-label {
+font-size: 14px;
+margin-bottom: 10px;
+}
+
+.signature {
+font-size: 32px;
+}
+
+.corner-decoration {
+width: 60px;
+height: 60px;
+}
+
+.corner-decoration::before {
+width: 25px;
+height: 25px;
+}
+
+.corner-decoration::after {
+width: 16px;
+height: 16px;
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+top: 15px;
+left: 15px;
+}
+
+.top-right {
+left: auto;
+right: 15px;
+}
+
+.bottom-left {
+top: auto;
+bottom: 15px;
+}
+
+.bottom-right {
+top: auto;
+left: auto;
+bottom: 15px;
+right: 15px;
+}
+
+.top-left::after,
+.top-right::after,
+.bottom-left::after,
+.bottom-right::after {
+top: 30px;
+left: 30px;
+}
+
+.top-right::after {
+left: auto;
+right: 30px;
+}
+
+.bottom-left::after {
+top: auto;
+bottom: 30px;
+}
+
+.bottom-right::after {
+top: auto;
+left: auto;
+bottom: 30px;
+right: 30px;
+}
+}
+
+@media (max-width: 480px) {
+.lock-icon {
+width: 80px;
+height: 95px;
+}
+
+.lock-body {
+width: 80px;
+height: 55px;
+}
+
+.lock-shackle {
+width: 46px;
+height: 46px;
+border: 12px solid #ffb3d9;
+}
+
+.lock-title {
+font-size: 28px;
+}
+
+.pin-key {
+width: 55px;
+height: 55px;
+font-size: 22px;
+}
+
+.pin-keypad {
+gap: 10px;
+}
+
+.gift-box {
+transform: scale(0.65);
+}
+
+.gift-box:hover {
+transform: scale(0.7) rotate(5deg);
+}
+
+.cake-container {
+transform: scale(0.6);
+}
+
+.cake-container:hover {
+transform: scale(0.65);
+}
+
+.birthday-card {
+height: 550px;
+}
+
+.card-front h1 {
+font-size: 50px;
+}
+
+.card-front p {
+font-size: 18px;
+}
+
+.card-inside h2 {
+font-size: 32px;
+margin-bottom: 20px;
+}
+
+.card-inside p {
+font-size: 15px;
+line-height: 1.6;
+}
+
+.signature {
+font-size: 28px;
+}
+}
 </style>
 </head>
 <body>
 <div class="container">
-<!-- Lock Screen -->
+ Lock Screen 
 <div class="screen active" id="lockScreen">
 <div class="lock-screen">
 <div class="lock-icon">
@@ -853,7 +1207,7 @@ transform-origin: 100% 100%;
 </div>
 </div>
 
-<!-- Gift Screen -->
+ Gift Screen 
 <div class="screen" id="giftScreen">
 <div class="gift-box" onclick="openGift()">
 <div class="box-lid"></div>
@@ -867,7 +1221,7 @@ transform-origin: 100% 100%;
 </div>
 </div>
 
-<!-- Cake Screen -->
+ Cake Screen 
 <div class="screen" id="cakeScreen">
 <div class="cake-container" onclick="showCard()">
 <div class="cake">
@@ -898,7 +1252,7 @@ transform-origin: 100% 100%;
 </div>
 </div>
 
-<!-- Card Screen -->
+ Card Screen 
 <div class="screen" id="cardScreen">
 <div class="card-wrapper" onclick="flipCard()">
 <div class="birthday-card" id="card">
