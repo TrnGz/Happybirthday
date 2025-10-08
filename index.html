@@ -334,11 +334,13 @@ box-shadow: 0 8px 25px rgba(255, 133, 192, 0.4),
 .bow::before {
 left: -45px;
 transform: rotate(-45deg);
+transform-origin: 0 100%;
 }
 
 .bow::after {
 right: -45px;
 transform: rotate(45deg);
+transform-origin: 100% 100%;
 }
 
 .bow-center {
@@ -584,8 +586,7 @@ max-width: 550px;
 }
 
 .birthday-card {
-width: 100%;
-max-width: 550px;
+width: 550px;
 height: 750px;
 position: relative;
 transform-style: preserve-3d;
@@ -977,120 +978,31 @@ top: -10px;
 }
 
 .birthday-card {
-height: 600px;
-}
-
-.card-front,
-.card-inside {
-border-radius: 20px;
-border-width: 8px;
-}
-
-.card-front {
-padding: 30px 20px;
-}
-
-.card-inside {
-padding: 40px 25px;
+height: 750px;
 }
 
 .card-front h1 {
-font-size: 60px;
-margin-bottom: 15px;
-}
-
-.card-front p {
-font-size: 20px;
-}
-
-.card-inside h2 {
-font-size: 38px;
+font-size: 80px;
 margin-bottom: 25px;
 }
 
+.card-front p {
+font-size: 28px;
+}
+
+.card-inside h2 {
+font-size: 58px;
+margin-bottom: 35px;
+}
+
 .card-inside p {
-font-size: 16px;
-line-height: 1.7;
-margin-bottom: 10px;
-}
-
-.signature-section {
-margin-top: 30px;
-padding-top: 20px;
-}
-
-.signature-label {
-font-size: 14px;
-margin-bottom: 10px;
+font-size: 22px;
+line-height: 1.9;
+margin-bottom: 15px;
 }
 
 .signature {
-font-size: 32px;
-}
-
-.corner-decoration {
-width: 60px;
-height: 60px;
-}
-
-.corner-decoration::before {
-width: 25px;
-height: 25px;
-}
-
-.corner-decoration::after {
-width: 16px;
-height: 16px;
-}
-
-.top-left,
-.top-right,
-.bottom-left,
-.bottom-right {
-top: 15px;
-left: 15px;
-}
-
-.top-right {
-left: auto;
-right: 15px;
-}
-
-.bottom-left {
-top: auto;
-bottom: 15px;
-}
-
-.bottom-right {
-top: auto;
-left: auto;
-bottom: 15px;
-right: 15px;
-}
-
-.top-left::after,
-.top-right::after,
-.bottom-left::after,
-.bottom-right::after {
-top: 30px;
-left: 30px;
-}
-
-.top-right::after {
-left: auto;
-right: 30px;
-}
-
-.bottom-left::after {
-top: auto;
-bottom: 30px;
-}
-
-.bottom-right::after {
-top: auto;
-left: auto;
-bottom: 30px;
-right: 30px;
+font-size: 42px;
 }
 }
 
@@ -1142,36 +1054,36 @@ transform: scale(0.65);
 }
 
 .birthday-card {
-height: 550px;
+height: 750px;
 }
 
 .card-front h1 {
-font-size: 50px;
+font-size: 45px;
 }
 
 .card-front p {
-font-size: 18px;
+font-size: 16px;
 }
 
 .card-inside h2 {
-font-size: 32px;
-margin-bottom: 20px;
+font-size: 28px;
+margin-bottom: 15px;
 }
 
 .card-inside p {
-font-size: 15px;
-line-height: 1.6;
+font-size: 14px;
+line-height: 1.5;
 }
 
 .signature {
-font-size: 28px;
+font-size: 24px;
 }
 }
 </style>
 </head>
 <body>
 <div class="container">
- Lock Screen 
+<!-- Lock Screen -->
 <div class="screen active" id="lockScreen">
 <div class="lock-screen">
 <div class="lock-icon">
@@ -1207,7 +1119,7 @@ font-size: 28px;
 </div>
 </div>
 
- Gift Screen 
+<!-- Gift Screen -->
 <div class="screen" id="giftScreen">
 <div class="gift-box" onclick="openGift()">
 <div class="box-lid"></div>
@@ -1221,7 +1133,7 @@ font-size: 28px;
 </div>
 </div>
 
- Cake Screen 
+<!-- Cake Screen -->
 <div class="screen" id="cakeScreen">
 <div class="cake-container" onclick="showCard()">
 <div class="cake">
@@ -1252,7 +1164,7 @@ font-size: 28px;
 </div>
 </div>
 
- Card Screen 
+<!-- Card Screen -->
 <div class="screen" id="cardScreen">
 <div class="card-wrapper" onclick="flipCard()">
 <div class="birthday-card" id="card">
